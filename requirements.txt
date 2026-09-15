@@ -1,0 +1,2 @@
+pyserial>=3.5,<4
+PyAutoGUI==0.9.54

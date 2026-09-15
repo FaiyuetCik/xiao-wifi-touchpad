@@ -1,0 +1,8 @@
+**/wifi_config.h
+__pycache__/
+*.pyc
+build/
+*.bin
+*.elf
+*.map
+.venv/
