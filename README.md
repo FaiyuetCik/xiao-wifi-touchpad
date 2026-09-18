@@ -31,6 +31,52 @@ Replace the example address with the computer LAN IP. Allow Python through the W
 
 The local wifi_config.h is ignored by Git. Never upload real passwords or firmware binaries built with real credentials.
 
+ ## Windows WiFi Gateway Setup
+
+  ### 1. Clone the project
+
+  Open PowerShell and run:
+
+  powershell
+  git clone https://github.com/FaiyuetCik/xiao-wifi-touchpad.git D:\xiao-wifi-touchpad
+
+  ### 2. Enter the project directory
+
+  cd D:\xiao-wifi-touchpad
+
+  cd means changing to a directory.
+
+  ### 3. Install dependencies
+
+  python -m pip install -r requirements.txt
+
+  ### 4. Start the WiFi gateway
+
+  python gateway\pocket_gateway.py --tcp 0.0.0.0 8765
+
+  When the following message appears, the gateway is running:
+
+  Waiting for Pocket Terminal TCP connection on 0.0.0.0:8765
+
+  ### 5. Configure the Arduino firmware
+
+  Open:
+
+  Pocket_AI_Terminal\wifi_config.h
+
+  Set the WiFi information:
+
+  #pragma once
+
+  static constexpr char WIFI_SSID[] = "YOUR_WIFI_NAME";
+  static constexpr char WIFI_PASSWORD[] = "YOUR_WIFI_PASSWORD";
+  static constexpr char GATEWAY_HOST[] = "192.168.5.121";
+
+  Save the file and upload the firmware again.
+
+  The computer and XIAO board must be connected to the same WiFi network.
+
+  > Replace 192.168.5.121 with your computer's local IPv4 address if it is different.
 ## Mouse gestures
 
 | Function | Gesture |
