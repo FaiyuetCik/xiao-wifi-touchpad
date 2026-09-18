@@ -38,7 +38,7 @@
 
   Open PowerShell and run:
 
-  ```powershell
+  powershell
   git clone https://github.com/FaiyuetCik/xiao-wifi-touchpad.git D:\xiao-wifi-touchpad
 
   ### 2. Enter the project directory
